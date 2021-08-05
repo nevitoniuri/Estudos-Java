@@ -15,11 +15,13 @@ public class Lutador {
 		this.vitorias = vitorias;
 		this.derrotas = derrotas;
 		this.empates = empates;
+		this.setCategoria();
 	}
 
 //----------METODOS PUBLICOS-----------
 	
 	public void apresentar() {
+		System.out.println("\n");
 		System.out.println("IT'S TIME! APRESENTAMOS O LUTADOR");
 		System.out.println("Lutador: " + this.getNome());
 		System.out.println("Origem: " + this.getNacionalidade());
@@ -29,10 +31,11 @@ public class Lutador {
 		System.out.println("Ganhou " + this.getVitorias() + " lutas.");
 		System.out.println("Perdeu " + this.getDerrotas() + " lutas.");
 		System.out.println("Empatou: " + this.getEmpates() + " lutas.");
+		System.out.println("\n");
 	}
 	
 	public void status() {
-		
+		System.out.println(this.getNome() + " está atualmente na categoria " + this.getCategoria() + ".");
 	}
 	
 	public void ganharLuta() {
@@ -73,12 +76,22 @@ public class Lutador {
 	private void setCategoria() {
 		if (this.getPeso() < 52.2) {
 			this.categoria = "Inválido";
+		} else if (this.getPeso() <= 56.7) {
+			this.categoria = "Peso Mosca";
+		} else if (this.getPeso() <= 61.2) {
+			this.categoria = "Peso Galo";
+		} else if (this.getPeso() <= 65.8) {
+			this.categoria = "Peso Pena";
 		} else if (this.getPeso() <= 70.3) {
-			this.categoria = "Leve";
+			this.categoria = "Peso Leve";		
+		} else if (this.getPeso() <= 77.1) {
+			this.categoria = "Peso Meio-Médio";
 		} else if (this.getPeso() <= 83.9) {
-			this.categoria = "Médio";
+			this.categoria = "Peso Médio";
+		} else if (this.getPeso() <= 92.9) {
+			this.categoria = "Peso Meio-Pesado";
 		} else if (this.getPeso() <= 120.2) {
-			this.categoria = "Pesado";
+			this.categoria = "Peso Pesado";
 		} else {
 			this.categoria = "Inválido";
 		}
