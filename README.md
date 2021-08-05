@@ -1,3 +1,3 @@
 # Estudos-Java
 
-Repositório criado para adicionar exercícios de estudos da Ementa DEV.
+Repositório criado para adicionar exercícios de estudos em .java da Ementa DEV.
