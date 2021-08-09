@@ -37,9 +37,9 @@ public class ContaBanco {
 	
 	public void fecharConta() {
 		if (this.getSaldo() > 0) {
-			System.out.println("Não é possível fechar a conta. Saldo disponível de R$ " + this.getSaldo());
+			System.out.println("NÃ£o Ã© possÃ­vel fechar a conta. Saldo disponÃ­vel de R$ " + this.getSaldo());
 		} else if (this.getSaldo() < 0) { 
-			System.out.println("Ação Impossível. Conta em DÉBITO de R$ " + this.getSaldo());
+			System.out.println("AÃ§Ã£o ImpossÃ­vel. Conta em DÃ‰BITO de R$ " + this.getSaldo());
 		} else {
 			this.setAberta(false);
 			System.out.println("Conta Fechada com Sucesso.");
@@ -49,9 +49,9 @@ public class ContaBanco {
 	public void depositar(double v) {
 		if(this.isAberta()) {
 			this.setSaldo(this.getSaldo() + v);
-			System.out.println("Depósito Realizado. Novo saldo: R$ " + this.getSaldo());
+			System.out.println("DepÃ³sito Realizado. Novo saldo: R$ " + this.getSaldo());
 		} else {
-			System.out.println("Conta Fechada. Impossível realizar o depósito.");
+			System.out.println("Conta Fechada. ImpossÃ­vel realizar o depÃ³sito.");
 		}
 	}
 	
@@ -59,12 +59,12 @@ public class ContaBanco {
 		if(this.isAberta()) {
 			if(this.getSaldo() >= v) {
 				this.setSaldo(this.getSaldo() + v);
-				System.out.println("Saque realizado. Novo saldo: R$ " + this.getSaldo());
+				System.out.println("Saque realizado. Novo saldo: R$ " - this.getSaldo());
 			} else {
 				System.out.println("Saldo insuficiente.");
 			}
 		} else {
-			System.out.println("Impossível sacar de uma conta fechada.");
+			System.out.println("ImpossÃ­vel sacar de uma conta fechada.");
 		}
 		
 	}
@@ -87,7 +87,7 @@ public class ContaBanco {
 			}
 			
 		} else {
-			System.out.println("Impossível. Conta fechada.");
+			System.out.println("ImpossÃ­vel. Conta fechada.");
 		}
 	}
 
@@ -105,7 +105,7 @@ public class ContaBanco {
 		if(this.tipo == "CC") {
 			this.tipo = "Conta Corrente";
 		} else {
-			this.tipo = "Conta Poupança";
+			this.tipo = "Conta PoupanÃ§a";
 		}
 		return tipo;
 	}
