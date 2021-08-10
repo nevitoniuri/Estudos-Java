@@ -12,7 +12,7 @@ public class Salario {
 		System.out.println("Digite a ID do Funcionario: ");
 		int id = sc.nextInt();
 		
-		System.out.println("Informe o número de horas trabalhadas: ");
+		System.out.println("Informe o nÃºmero de horas trabalhadas: ");
 		int horas = sc.nextInt();
 		
 		System.out.println("Informe o valor da hora: ");
@@ -22,6 +22,6 @@ public class Salario {
 		double salario = horas * valor_hora;
 		
 		System.out.println("ID = " + id);
-		System.out.printf("Salário = %.2f", salario);
+		System.out.printf("SalÃ¡rio = %.2f", salario);
 	}
 }

@@ -4,15 +4,15 @@ public class TesteSimplesConstrutor {
 
 	public static void main(String[] args) {
 		
-		// Sem o uso do construtor com parâmetros
-		Pessoa p = new Pessoa(); // Erro: construtor padrão
-		p.nome = "João";         // não existe mais
+		// Sem o uso do construtor com parï¿½metros
+		Pessoa p = new Pessoa(); // Erro: construtor padrï¿½o
+		p.nome = "Joao";         // nï¿½o existe mais
 		p.cpf = "000.000.000-00";
 		
-		// Com o uso do construtor com parâmetros
-		Pessoa p2 = new Pessoa("João", "000.000.000-00");
+		// Com o uso do construtor com parï¿½metros
+		Pessoa p2 = new Pessoa("Joao", "000.000.000-00");
 		// ...
-		System.out.println(p.nome); // Imprime: João
+		System.out.println(p.nome); // Imprime: Joï¿½o
 		System.out.println(p.cpf); // Imprime: 000.000.000-00
 		
 	}
@@ -22,14 +22,14 @@ public class TesteSimplesConstrutor {
 
 	public static void main(String[] args) {
 		
-		// Sem o uso do construtor com parâmetros
+		// Sem o uso do construtor com parï¿½metros
 		//Pessoa p = new Pessoa(); 
-		//p.nome = "João";         
+		//p.nome = "Joï¿½o";         
 		//p.cpf = "000.000.000-00";
 		
-		// Com o uso do construtor com parâmetros
-		Pessoa p = new Pessoa("João", "000.000.000-00");
-		System.out.println(p.nome); // Imprime: João
+		// Com o uso do construtor com parï¿½metros
+		Pessoa p = new Pessoa("Joï¿½o", "000.000.000-00");
+		System.out.println(p.nome); // Imprime: Joï¿½o
 		System.out.println(p.cpf); // Imprime: 000.000.000-00
 		
 	}
