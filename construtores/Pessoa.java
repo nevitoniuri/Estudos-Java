@@ -3,6 +3,8 @@ package construtores;
 public class Pessoa {
 	
 	private static int totalDePessoas = 0;
+	public String nome;
+	public String cpf;
 	
 	Pessoa() {
 		Pessoa.totalDePessoas = Pessoa.totalDePessoas + 1; 

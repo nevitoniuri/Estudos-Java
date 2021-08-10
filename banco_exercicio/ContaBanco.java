@@ -58,8 +58,8 @@ public class ContaBanco {
 	public void sacar(double v) {
 		if(this.isAberta()) {
 			if(this.getSaldo() >= v) {
-				this.setSaldo(this.getSaldo() + v);
-				System.out.println("Saque realizado. Novo saldo: R$ " - this.getSaldo());
+				this.setSaldo(this.getSaldo() - v);
+				System.out.println("Saque realizado. Novo saldo: R$ " + this.getSaldo());
 			} else {
 				System.out.println("Saldo insuficiente.");
 			}
